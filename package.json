@@ -22,7 +22,7 @@
     "rc-menu": "^7.5.5",
     "rc-slider": "^8.7.1",
     "re-resizable": "^6.9.0",
-    "react": "^17.0.1",
+    "react": "^18.2.0",
     "react-app-polyfill": "^0.2.2",
     "react-autocomplete": "^1.8.1",
     "react-collapsible": "^2.8.3",

@@ -60,22 +60,7 @@ class Measure extends Component {
             return Math.round(meters * 3.28084 * 100) / 100;
           },
         },
-        {
-          name: "Yard",
-          abbreviation: "yd",
-          type: "distance",
-          convertFunction: (meters) => {
-            return Math.round(meters * 1.09361 * 100) / 100;
-          },
-        },
-        {
-          name: "Inches",
-          abbreviation: "in",
-          type: "distance",
-          convertFunction: (meters) => {
-            return Math.round(meters * 39.3701 * 100) / 100;
-          },
-        },
+
         {
           name: "Square Meter",
           abbreviation: "sq m",

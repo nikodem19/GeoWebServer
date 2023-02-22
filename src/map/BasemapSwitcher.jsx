@@ -579,12 +579,7 @@ class BasemapSwitcher extends Component {
       <div className={!this.state.showBaseMapSwitcher ? " sc-hidden" : ""}>
         <div id="sc-basemap-main-container">
           <div id="sc-basemap-collapse-button" className={this.state.containerCollapsed ? "sc-basemap-collapse-button closed" : "sc-basemap-collapse-button"} onClick={this.onCollapsedClick} />
-          <div className={this.state.containerCollapsed ? "sc-hidden" : "sc-basemap-imagery"}>
-            <button className={this.state.activeButton === "imagery" ? "sc-button sc-basemap-imagery-button active" : "sc-button sc-basemap-imagery-button"} onClick={this.onImageryButtonClick}>
-              Imagery
-            </button>
-            <button className="sc-button sc-basemap-arrow" onClick={this.onImageryArrowClick} />
-          </div>
+
           <div className={this.state.containerCollapsed ? "sc-hidden" : "sc-basemap-topo"}>
             <button className={this.state.activeButton === "topo" ? "sc-button sc-basemap-topo-button active" : "sc-button sc-basemap-topo-button"} onClick={this.onTopoButtonClick}>
               Topo

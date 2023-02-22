@@ -11,9 +11,9 @@ import VectorLayer from "ol/layer/Vector";
 import { Circle as CircleStyle, Fill, Stroke, Style } from "ol/style.js";
 
 import useIframeContentHeight from "react-use-iframe-content-height";
-import Geometry from "ol/geom/Geometry";
+//import Geometry from "ol/geom/Geometry";
 import { useEffect } from "react";
-import GeometryType from "ol/geom/GeometryType";
+//import GeometryType from "ol/geom/GeometryType";
 
 class Identify extends Component {
   constructor(props) {

@@ -35,7 +35,7 @@ class MapComponent extends Component {
 
 	componentDidMount() {
 		// TWEEK TO CENTER MAP DEPENDING ON MODE
-		const centerCoords = [-8875141.45, 5543492.45];
+		const centerCoords = [556622.45, -1562649.45];
 
 		var map = new Map({
 			controls: defaultControls().extend([scaleLineControl, new FullScreen()]),
