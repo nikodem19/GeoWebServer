@@ -280,6 +280,19 @@
     },
     {
       "server_type": "esri",
+      "label": "pridany service 1",
+      "value": "Public",
+      "discoveryUrl": "http://localhost:8080/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+      "discoverySuffix": "?f=json",
+      "serviceType": "wms",
+      "serviceUrl": "http://localhost:8080/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+      "urlSuffix": "/MapServer/WMSServer",
+      "INFO_FORMAT": "text/plain",
+      "XSL_TEMPLATE": "/public/xsl/esri_transform.xsl",
+      "filterServices": ["Public/Operational_Layers_Dynamic"]
+    },
+    {
+      "server_type": "esri",
       "label": "maps.simcoe.ca",
       "value": "Public",
       "discoveryUrl": "https://maps.simcoe.ca/arcgis/rest/services",

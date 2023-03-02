@@ -53,7 +53,7 @@ In the project diretory, type `npm run build` in the terminal. Details can be fo
 ## To create a new tool
 
 1. Create new directory for tool in 'src/sidebar/components/tools/yourToolName'
-2. Copy template files into the previous directory from 'src/componentTemplate/ToolComponent.jsx' and 'src/componentTemplate/toolComponent.css
+2. Copy template files into the previous directory from 'src/componentTemplate/LocalFiles.jsx' and 'src/componentTemplate/toolComponent.css
 3. Rename the files to your component name (case sentive)
 4. Add tool to the main config in 'src/config.json'. Copy existing tool text in the config, for an example.
 

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component ,useState} from "react";
 import "./Navigation.css";
 import { fromLonLat } from "ol/proj";
 import * as helpers from "../helpers/helpers";
@@ -7,6 +7,7 @@ import { FaForward, FaBackward } from "react-icons/fa";
 class Navigation extends Component {
 	constructor(props) {
 		super(props);
+
 
 		this.state = {
 			containerClassName: "nav-container",
@@ -110,6 +111,16 @@ class Navigation extends Component {
 						>
 							-
 						</div>
+						<div
+							className="zoomButton"
+							title="identify"
+							onClick={() => {
+								window.popup.disable();
+							}}
+						>
+							i
+						</div>
+
 						<div className="extentHistory">
 							<div
 								className={`prevExtentButton ${this.state.extentHistory[0] === 0 ? "disabled" : ""}`}

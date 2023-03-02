@@ -1615,7 +1615,8 @@ export function loadConfig(callback) {
         window.config = config;
         callback();
       }
-      const settings = JSON.parse(result.json);
+      //const settings = JSON.parse(result.json);
+      const settings = {name: "Public", zoom_level: 8, center: "-37882423.709180094, 6210982.565766724", showWhatsNewPopupOnStartup: false, default_group: "simcoe:All_Layers_Public", sources: [{ layerUrl: "https://opengis.simcoe.ca/geoserver/simcoe/Config_Public_Default/ows?service=wms&version=1.3.0&request=GetCapabilities", secure: false, primary: true }], zoom_level:8 };
       if (settings.name !== undefined) document.title = settings.name;
       if (settings.zoom_level !== undefined) {
         settings["defaultZoom"] = settings.zoom_level;

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, {Component, useEffect} from "react";
 import "./Settings.css";
 import { ClearLocalStorageButton, ClearLocalStorageButtonGrouped } from "./SettingsComponents.jsx";
 import * as helpers from "../../../../helpers/helpers";
@@ -20,7 +20,9 @@ class Settings extends Component {
     };
     this.storageKey = "Settings";
     this.storageKeyMapControls = "Map Control Settings";
+
   }
+
 
   componentDidMount() {
     //wait for map to load
@@ -116,6 +118,13 @@ class Settings extends Component {
         <div className="sc-settings-container">
           <div className="sc-container">
             <div className="sc-description">Set your personal preferences.</div>
+            { Object.keys(localStorage)
+
+            }
+            { Object.keys.length
+
+            }
+
             <div className="sc-settings-divider" />
             <div className={settingsConfig.showControlSettings ? "" : "sc-hidden"}>
               <div className="sc-title sc-settings-title">VISIBLE CONTROLS</div>

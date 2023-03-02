@@ -20,6 +20,8 @@ var isMoving = false;
 var isClosing = false;
 window.popupActive = false;
 
+var canOpen = true;
+
 export default class Popup extends Overlay {
   constructor(opt_options) {
     var options = opt_options || {};
@@ -116,7 +118,7 @@ export default class Popup extends Overlay {
    * @returns {Popup} The Popup instance
    */
   show(coord, html, title = "Info", callback = null) {
-    if (!window.activeClick || window.activeClick.coordinates[0] !== coord[0] || window.activeClick.coordinates[1] !== coord[1]) {
+    if (canOpen) {if (!window.activeClick || window.activeClick.coordinates[0] !== coord[0] || window.activeClick.coordinates[1] !== coord[1]) {
       window.activeClick = { coordinates: coord, time: performance.now() };
     } else if (window.activeClick && window.activeClick.coordinates[0] === coord[0] && window.activeClick.coordinates[1] === coord[1]) {
       if (callback) callback();
@@ -145,7 +147,7 @@ export default class Popup extends Overlay {
     this.container.style.display = "block";
     this.content.scrollTop = 0;
     this.setPosition(coord);
-
+    }
     var header = document.getElementById("sc-popup-header");
     // header.addEventListener('mousedown', function(evt) {
     //   dragPan.setActive(false);
@@ -239,6 +241,12 @@ export default class Popup extends Overlay {
     }
   }
 
+  disable() {
+    window.popup.hide();
+    if (canOpen) canOpen=false;
+    else canOpen=true;
+  }
+
   /**
    * Hide the popup.
    * @returns {Popup} The Popup instance
@@ -290,3 +298,4 @@ function isElement(element) {
 function isDOMTypeElement(element) {
   return isElement(element) && typeof element.type === "string";
 }
+
